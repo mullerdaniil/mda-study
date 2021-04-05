@@ -1,0 +1,56 @@
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    /*background-color: skyblue;*/
+
+    width: 90vw;
+    height: 85vh;
+
+    font-family: 'Montserrat', serif;
+    font-weight: 700;
+
+    font-size: 5vmin;
+    color: black;
+
+    padding: 5vmin;
+}
+
+.questionBlock {
+    text-align: center;
+    /*background-color: coral;*/
+
+    font-size: 15vmin;
+
+    width: 95%;
+    height: 30%;
+
+    margin-bottom: 5vh;
+}
+
+.answerBlock {
+    text-align: center;
+}
+
+.timerBlock {
+    color: darkblue;
+
+    text-align: center;
+    /*background-color: coral;*/
+
+    width: 40%;
+    height: 40%;
+
+    font-size: 20vmin;
+}
+
+
+
+
+.mainElement {
+
+
+
+}
