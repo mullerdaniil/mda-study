@@ -17,6 +17,7 @@ let currentDigits = "";
 
 window.onload = () => {
     $("#answerField").prop('disabled', true);
+    digitsCount = localStorage.getItem('digitsCount');
 }
 
 window.onkeydown = (event) => {
@@ -84,8 +85,10 @@ function setDigitsCount() {
 
     }
 
-    if (count > 0 && count <= DIGITS_COUNT_LIMIT)
+    if (count > 0 && count <= DIGITS_COUNT_LIMIT) {
         digitsCount = count;
+        localStorage.setItem('digitsCount', count);
+    }
 }
 
 function generateRandomDigits() {
