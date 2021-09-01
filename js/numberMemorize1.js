@@ -17,6 +17,9 @@ let currentDigits = "";
 
 window.onload = () => {
     $("#answerField").prop('disabled', true);
+    if (localStorage.getItem('digitsCount') === null)
+        return;
+
     digitsCount = localStorage.getItem('digitsCount');
 }
 
