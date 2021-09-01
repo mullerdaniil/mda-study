@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+
+}
+
+body {
+    background-color: midnightblue;
+    font-family: 'Montserrat', sans-serif;
+    color: aliceblue;
+}
+
+.container {
+    font-size: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 90vh;
+}
+
+.container input {
+   font-size: 40px;
+}
+
+.sizeSettings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sizeSettings * {
+    padding: 0 40px;
+}
+
+.sizeSettings input {
+    width: 40px;
+}
+
+.sizeSettings button {
+
+}
+
+.digitsBlock {
+    font-size: 90px;
+}
+
+button {
+    background: springgreen;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+}
