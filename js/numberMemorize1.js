@@ -25,24 +25,28 @@ window.onload = () => {
 
 window.onkeydown = (event) => {
     if (event.keyCode === 32) { // SPACE
-        if (mode === 1) {
-            mode = 2;
-            currentDigits = generateRandomDigits();
-            $('#digits').html(currentDigits);
-            startTimer();
-
-        } else if (mode === 2) {
-            hideDigits();
-        } else if (mode === 4) {
-            mode = 1;
-            $('#answerField').val('');
-            $('#digits').html('><');
-            $('body').css('background-color', 'midnightblue');
-        }
+        changeMode();
     }
 
     if (event.keyCode === 13) { // ENTER
         onSubmitButton();
+    }
+}
+
+function changeMode() {
+    if (mode === 1) {
+        mode = 2;
+        currentDigits = generateRandomDigits();
+        $('#digits').html(currentDigits);
+        startTimer();
+
+    } else if (mode === 2) {
+        hideDigits();
+    } else if (mode === 4) {
+        mode = 1;
+        $('#answerField').val('');
+        $('#digits').html('><');
+        $('body').css('background-color', 'midnightblue');
     }
 }
 
@@ -69,6 +73,7 @@ function hideDigits() {
     $('#digits').html('...');
     $("#answerField").prop('disabled', false);
     $('#answerField').focus();
+    $('#answerField').val('');
 }
 
 function onSubmitButton() {
