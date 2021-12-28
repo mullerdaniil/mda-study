@@ -12,7 +12,7 @@ let timePassed = 0;
 let timerActive = false;
 
 let digitsCount = 24;
-const DIGITS_COUNT_LIMIT = 48;
+const DIGITS_COUNT_LIMIT = 60;
 let currentDigits = "";
 
 window.onload = () => {

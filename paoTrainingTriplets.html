@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Triplets training</title>
+    <link rel="stylesheet" href="css/paoTrainingTriplets.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;1,500&display=swap"
+          rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/paoTrainingTriplets.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="progress" id="progress">
+            0
+        </div>
+        <div class="digits">
+            <span id="digits1">xx</span>
+            <span id="digits2">xx</span>
+            <span id="digits3">xx</span>
+        </div>
+        <div class="button" onclick="onStartButtonClick();">
+            <button id="startButton">start</button>
+        </div>
+        <div class="input" style="display: none;">
+            <input id="textInput" type="text" oninput="onInput();">
+        </div>
+        <div class="timer" id="timer">
+            0:00
+        </div>
+    </div>
+
+</body>
+</html>
