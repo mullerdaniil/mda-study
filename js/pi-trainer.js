@@ -126,7 +126,6 @@ function startTimer() {
     }, timeout);
 }
 
-
 function endTimer() {
     timerActive = false;
     clearInterval(timerInterval);
