@@ -92,8 +92,6 @@ window.onkeydown = (event) => {
         }
     }
 
-    console.log(event.key);
-
 }
 
 function refillLives() {
@@ -158,9 +156,6 @@ function displayDps() {
 }
 
 function checkDigit(digit) {
-    console.log("s" + (currentDigit - startDigit + 1));
-    console.log("b" + digitsCount);
-
     if (PI[currentDigit] === digit) {
         for (let i = 0; i < 9; i++) {
             lastDigits[i] = lastDigits[i + 1];
