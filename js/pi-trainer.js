@@ -200,12 +200,14 @@ function gameLost() {
     status = LOST;
     displayLost();
     endTimer();
+    $('#lostSound')[0].play();
 }
 
 function gameWon() {
     status = WON;
     displayWon();
     endTimer();
+    $('#winSound')[0].play();
 }
 
 function displayCurrent() {
