@@ -100,7 +100,7 @@ body {
     font-size: 120px;
 
     background: #121FCF;
-    background: linear-gradient(to right, #111122 0%, aquamarine 100%);
+    background: linear-gradient(to right, #111122 0%, lime 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
