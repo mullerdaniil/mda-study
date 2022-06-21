@@ -121,9 +121,10 @@ body {
 .set-numbers button {
     height: 35px;
     width: 70px;
-    background-color: blueviolet;
+    background-color: darkviolet;
     font-family: 'Montserrat', sans-serif;
     border-radius: 6px;
+    transition: 200ms;
 }
 
 .set-numbers input {
@@ -159,4 +160,10 @@ body {
     to {
         background: #111122;
     }
+}
+
+#set-button:hover {
+    box-shadow: 0 0 10px blueviolet, 0 0 40px blueviolet, 0 0 80px blueviolet;
+    background-color: blueviolet;
+    /*transition: 200s;*/
 }
