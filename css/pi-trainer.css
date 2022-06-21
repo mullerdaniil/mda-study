@@ -136,7 +136,7 @@ body {
 }
 
 .lost-screen {
-    animation: change-lost-bg 1200ms ease-out;
+    animation: change-lost-bg 1100ms ease-out;
 }
 
 @keyframes change-lost-bg {
@@ -149,7 +149,7 @@ body {
 }
 
 .won-screen {
-    animation: change-won-bg 1200ms ease-out;
+    animation: change-won-bg 1100ms ease-out;
 }
 
 @keyframes change-won-bg {
