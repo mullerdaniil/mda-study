@@ -107,6 +107,7 @@ function startGame() {
     currentDigit = startDigit - 1;
     refillLives();
     startTimer();
+    displayStart();
     $('#container').removeClass('won-screen');
     $('#container').removeClass('lost-screen');
     $('#digits').html("__________");
@@ -154,6 +155,11 @@ function displayDps() {
     }
 }
 
+function displayDpsAnyway() {
+    let dps = Math.round((currentDigit - startDigit + 1) / timePassed * (1000 / timeout) * 100) / 100;
+    $('#dps').html(`${dps}`);
+}
+
 function checkDigit(digit) {
     if (PI[currentDigit] === digit) {
         for (let i = 0; i < 9; i++) {
@@ -190,15 +196,23 @@ function displayWon() {
     $('#container').addClass('won-screen');
 }
 
+function displayStart() {
+    $('#container').addClass('start-screen');
+}
+
 function gameLost() {
+    $('#container').removeClass('start-screen');
     status = LOST;
+    displayDpsAnyway();
     displayLost();
     endTimer();
-    //$('#lostSound')[0].play();
+    // $('#lostSound')[0].play();
 }
 
 function gameWon() {
+    $('#container').removeClass('start-screen');
     status = WON;
+    displayDpsAnyway();
     displayWon();
     endTimer();
     //$('#winSound')[0].play();
