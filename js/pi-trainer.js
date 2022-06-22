@@ -81,7 +81,7 @@ window.onkeydown = (event) => {
             resetGame();
         }
     } else if (event.key === 'Enter') {
-        removeLive();
+        setCount();
     } else if (event.key === 'w') {
         displayLost();
     }
