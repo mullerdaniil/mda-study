@@ -20,7 +20,6 @@ let currentDigit = 0;
 let lastDigits = ['_', '_', '_', '_', '_', '_', '_', '_', '_', '_'];
 
 window.onload = () => {
-    addLives();
     initDigits();
     loadCount();
 }
@@ -50,15 +49,6 @@ function setCount() {
 
 function initDigits() {
     $('#digits').html("__________");
-}
-
-function addLives() {
-    for (let i = 0; i < livesCount; i++) {
-        $('#lives').append(`<div id="live${i}" class="live"></div>`);
-    }
-    for (let i = 0; i < livesCount; i++) {
-        $(`#live${i}`).addClass('active-live');
-    }
 }
 
 function removeLive() {
