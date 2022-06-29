@@ -33,6 +33,7 @@ function loadCount() {
     startDigit = localStorage.getItem('start-digit');
     $('#start-digit-field').val(startDigit);
     $('#digits-count-field').val(digitsCount);
+    displayBest();
 }
 
 function setCount() {
@@ -45,6 +46,7 @@ function setCount() {
 
     localStorage.setItem('digits-count', digitsCount);
     localStorage.setItem('start-digit', startDigit);
+    displayBest();
 }
 
 function initDigits() {
@@ -205,11 +207,41 @@ function gameWon() {
     displayDpsAnyway();
     displayWon();
     endTimer();
+    saveBest();
+    displayBest();
     //$('#winSound')[0].play();
 }
 
 function displayCurrent() {
     $('#current-count').html(currentDigit);
+}
+
+function saveBest() {
+    let val = localStorage.getItem(startDigit + ' ' + digitsCount);
+    if (val === null) {
+        localStorage.setItem(startDigit + ' ' + digitsCount, timePassed + ' ' + (livesCount - currentLive - 1));
+    } else {
+        let currentRecord = localStorage.getItem(startDigit + ' ' + digitsCount).split(' ');
+        if (timePassed < currentRecord[0]) {
+            localStorage.setItem(startDigit + ' ' + digitsCount, timePassed + ' ' + (livesCount - currentLive - 1));
+        }
+    }
+}
+
+function displayBest() {
+    let val = localStorage.getItem(startDigit + ' ' + digitsCount);
+    if (val !== null) {
+        let vals = val.split(' ');
+        let text;
+        if (vals[1] === '0') {
+            text = (vals[0] / 100) + '';
+        } else {
+            text = (vals[0] / 100) + ' (-' + vals[1] + ' lives)';
+        }
+        $('#best').html(text);
+    } else {
+        $('#best').html('');
+    }
 }
 
 function resetGame() {

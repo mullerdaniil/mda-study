@@ -180,3 +180,8 @@ body {
     background-color: blueviolet;
     /*transition: 200s;*/
 }
+
+#best {
+    font-size: 20px;
+    color: lightyellow;
+}
