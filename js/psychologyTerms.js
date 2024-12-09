@@ -166,6 +166,27 @@ window.onkeydown = function (event) {
     }
 }
 
+function onQuestionClick() {
+    if (isQuestionShown && currentQuestion === questionsCount)
+        showFinished();
+    else if (isQuestionShown)
+        showNextQuestion();
+    else if (!isQuestionShown)
+        showNextAnswer();
+}
+
+function onAnswerClick() {
+    if (currentQuestion > 0)
+        currentQuestion--;
+
+    isQuestionShown = true;
+    if (isQuestionShown && currentQuestion === questionsCount)
+        showFinished();
+    else if (isQuestionShown)
+        showNextQuestion();
+
+}
+
 
 // ----- TIMER -----
 
